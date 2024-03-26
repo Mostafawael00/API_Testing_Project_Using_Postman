@@ -1,0 +1,1267 @@
+{
+	"info": {
+		"_postman_id": "e81882c3-8703-4931-b91a-7b3a4612e3b2",
+		"name": "ITI_Graduation_Project_Using_PublicHosts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33346923"
+	},
+	"item": [
+		{
+			"name": "Try register with no data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"display username must not blank\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"not be blank\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"display Email ia already exists\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"already exists\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"display password must not blank\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"not be blank\");\r",
+							"});\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/user/register/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try register with username only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"display Email ia already exists\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"already exists\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"display password must not blank\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"not be blank\");\r",
+							"});\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"wael123\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/user/register/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try register with email only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"display username must not blank\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"not be blank\");\r",
+							"});\r",
+							"\r",
+							" pm.test(\"display password must not blank\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"not be blank\");\r",
+							"});\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"email\": \"hanafy@gmail.com\",\r\n    \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/user/register/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try register with password only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"display username must not blank\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"not be blank\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"display Email ia already exists\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"already exists\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/user/register/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try register with username & email only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" \r",
+							"pm.test(\"display password must not blank\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"not be blank\");\r",
+							"});\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"wael\",\r\n    \"first_name\": \"abdelaziz\",\r\n    \"last_name\": \"abo-elresh\",\r\n    \"email\": \"hanafy@gmail.com\",\r\n    \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/user/register/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try register with username & password only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" \r",
+							"\r",
+							"pm.test(\"display Email ia already exists\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"already exists\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"abbas\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"abbas123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/user/register/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try register with email & password only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"display username must not blank\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"not be blank\");\r",
+							"});\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"email\": \"abbas@gmail.com\",\r\n    \"password\": \"s555&322f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/user/register/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try register with Invalid Email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"display Enter a valid Email\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"valid email address\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"abbas\",\r\n    \"first_name\": \"abbas\",\r\n    \"last_name\": \"meaw\",\r\n    \"email\": \"abbas@gmail\",\r\n    \"password\": \"s555&322f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/user/register/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try register with all data is valid but already exists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"username or email are already exists\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\" already exists\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mostafawael3\",\r\n    \"first_name\": \"wael\",\r\n    \"last_name\": \"hanafy\",\r\n    \"email\": \"wael@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/user/register/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try register with all data is valid and NEW",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Successful Registration\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Successful Registration\", function () {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mostafawael56\",\r\n    \"first_name\": \"wael\",\r\n    \"last_name\": \"hanafy\",\r\n    \"email\": \"wae53@gmail.com\",\r\n    \"password\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/user/register/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try login with valid password and invalid username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" \r",
+							"\r",
+							"pm.test(\"Verify display Incorrect username or password massage\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Incorrect username\");\r",
+							"});\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mostafawael5\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/auth/basic/login/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"auth",
+						"basic",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try login with valid username and invalid password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify display Incorrect username or password massage\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Incorrect username\");\r",
+							"});\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mostafawael3\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/auth/basic/login/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"auth",
+						"basic",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try login with valid password only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"display username must not blank\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"not be blank\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/auth/basic/login/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"auth",
+						"basic",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try login with valid username only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"display password must not blank\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"not be blank\");\r",
+							"});\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mostafawael3\",\r\n    \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/auth/basic/login/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"auth",
+						"basic",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try Login with my registration data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"\r",
+							"pm.environment.set(\"Myid\", jsonData.id);\r",
+							"pm.environment.set(\"Myusername\", jsonData.username);\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Login Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mostafawael56\",\r\n    \"password\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/auth/basic/login/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"auth",
+						"basic",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.environment.set(\"Mytoken\", jsonData.access);\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Token Get Successfully\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"access\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "{{Myusername}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BaseURL}}/auth/token/login/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"auth",
+						"token",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify That no edites yet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify That No Thing Is Added Yet\"  , function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"     pm.expect(jsonData).empty;\r",
+							"  });"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Mytoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/my/crocodiles/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"my",
+						"crocodiles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try Add Crocodile Without name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('display name must not blank', function () {\r",
+							"    pm.expect(pm.response.text()).to.include('not be blank');\r",
+							"})\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Mytoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"sex\": \"M\",\r\n    \"date_of_birth\": \"1997-04-23\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/my/crocodiles/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"my",
+						"crocodiles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try Add Crocodile Without sex",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('display sex not a valid choice', function () {\r",
+							"    pm.expect(pm.response.text()).to.include('valid choice');\r",
+							"})\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Mytoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"abbas\",\r\n    \"sex\": \"\",\r\n    \"date_of_birth\": \"1997-04-23\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/my/crocodiles/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"my",
+						"crocodiles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try add Crocodile without date or with wrong format",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('display Date has wrong format', function () {\r",
+							"    pm.expect(pm.response.text()).to.include('Date has wrong format');\r",
+							"})\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Mytoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"abbas\",\r\n    \"sex\": \"M\",\r\n  //  \"date_of_birth\": \"\"\r\n     \"date_of_birth\": \"23-04-1997\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/my/crocodiles/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"my",
+						"crocodiles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try add crocodile with valid name & sex & date ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful Crocodile Add\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							" \r",
+							"    var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.environment.set(\"Myid\", jsonData.id);\r",
+							"  "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Mytoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"abbas\",\r\n    \"sex\": \"M\",\r\n    \"date_of_birth\": \"1997-04-23\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/my/crocodiles/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"my",
+						"crocodiles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try update crocodile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Update Request Done\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"gamelaaa\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Mytoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"gamelaaa\",\r\n    \"sex\": \"F\",\r\n    \"date_of_birth\": \"1997-04-23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/my/crocodiles/{{Myid}}/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"my",
+						"crocodiles",
+						"{{Myid}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try Modify Selected Field only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Update Request Done\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"aaaabbas\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Mytoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"name\": \"aaaabbas\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/my/crocodiles/{{Myid}}/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"my",
+						"crocodiles",
+						"{{Myid}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all my crocodiles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Mytoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/my/crocodiles/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"my",
+						"crocodiles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try Delete specific crocodile using ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Mytoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/my/crocodiles/{{Myid}}/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"my",
+						"crocodiles",
+						"{{Myid}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify the delete request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify That Crocodile Deleted Successfully\"  , function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"     pm.expect(jsonData).empty;\r",
+							"  });"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Mytoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/my/crocodiles/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"my",
+						"crocodiles",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
